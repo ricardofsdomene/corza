@@ -25,14 +25,14 @@ export default function Page() {
       <Flex w="100%" bg="#d5fe41" flexDir="column">
         <Flex w="100%" p="6" px="8" align="center" justify="space-between">
           <Text fontFamily="Poppins" fontSize="1.4rem">
-            Corza Digital
+            Corza
           </Text>
-          <Flex align="center" pr="4">
+          <Flex align="center">
             <Text
               borderRadius="full"
               bg="#333"
               color="#d5fe41"
-              px="6"
+              px="4"
               py="2"
               fontFamily="Poppins"
               fontWeight="bold"
@@ -44,9 +44,10 @@ export default function Page() {
         </Flex>
         <Flex w="100%" justify="space-between" align="center">
           <Flex
+            maxW="100vw"
             flexDir="column"
             p="8"
-            fontSize={mobile ? "3.5rem" : tablet ? "4.5rem" : "5.5rem"}
+            fontSize={mobile ? "2rem" : tablet ? "4.5rem" : "5.5rem"}
           >
             <Text fontFamily="Climate Crisis">Mão de obra</Text>
             <Text fontFamily="Climate Crisis">Qualificada</Text>
@@ -69,7 +70,11 @@ export default function Page() {
             justify="center"
             align="center"
           >
-            <Text fontFamily="Poppins" fontSize={mobile ? "0.7rem" : "1rem"}>
+            <Text
+              fontFamily="Poppins"
+              whiteSpace="nowrap"
+              fontSize={mobile ? "0.5rem" : "1rem"}
+            >
               Landing Page
             </Text>
           </Flex>
@@ -89,7 +94,11 @@ export default function Page() {
             justify="center"
             align="center"
           >
-            <Text fontFamily="Poppins" fontSize={mobile ? "0.7rem" : "1rem"}>
+            <Text
+              fontFamily="Poppins"
+              whiteSpace="nowrap"
+              fontSize={mobile ? "0.5rem" : "1rem"}
+            >
               Trafego pago
             </Text>
           </Flex>
@@ -109,7 +118,11 @@ export default function Page() {
             justify="center"
             align="center"
           >
-            <Text fontFamily="Poppins" fontSize={mobile ? "0.7rem" : "1rem"}>
+            <Text
+              fontFamily="Poppins"
+              whiteSpace="nowrap"
+              fontSize={mobile ? "0.5rem" : "1rem"}
+            >
               Funil de venda
             </Text>
           </Flex>
@@ -161,7 +174,7 @@ export default function Page() {
           color="#FFF"
           fontFamily="Poppins"
         >
-          <Flex fontSize={mobile ? "2.5rem" : tablet ? "2.5rem" : "3.5rem"}>
+          <Flex fontSize={mobile ? "2rem" : tablet ? "2.5rem" : "3.5rem"}>
             <Flex overflowX="hidden">
               <Text
                 fontFamily="Climate Crisis"
@@ -177,7 +190,6 @@ export default function Page() {
           borderTop="1px solid #333"
           bg="#000"
           w="100%"
-          p="8"
           py={20}
           color="#d5fe41"
           flexDir={mobile ? "column" : "row"}
@@ -185,20 +197,21 @@ export default function Page() {
           align={"center"}
           justify="space-around"
         >
-          <Flex flexDir="column" w={mobile ? "100%" : "55%"}>
+          <Flex p="8" flexDir="column" w={mobile ? "100%" : "55%"}>
             <Text
               fontFamily="Poppins"
               textAlign={mobile ? "center" : "left"}
-              fontSize={mobile ? "2rem" : "2.6rem"}
+              fontSize={mobile ? "1.9rem" : "2.6rem"}
               fontWeight="bold"
+              mt={mobile ? -10 : 0}
             >
               Nós temos a solução para seu negócio digital
             </Text>
             <Text
-              mt="4"
+              mt="6"
               fontFamily="Poppins"
               textAlign={mobile ? "center" : "left"}
-              fontSize={mobile ? "1.1rem" : "1.55rem"}
+              fontSize={mobile ? "1rem" : "1.55rem"}
             >
               Especializados em{" "}
               <span style={{ fontWeight: "bold" }}>landing pages</span>,{" "}
@@ -213,13 +226,14 @@ export default function Page() {
           </Flex>
           <Flex
             ml={desktop ? "0" : "8"}
-            mt={mobile ? 20 : "0"}
+            mt={mobile ? 10 : "0"}
             flexDir="column"
+            pr="8"
           >
             <Image
               src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               style={{
-                width: 550,
+                width: mobile ? "100%" : 550,
                 height: "auto",
                 borderRadius: 50,
                 border: "4px solid #d5fe41",
@@ -230,7 +244,7 @@ export default function Page() {
               w="100%"
               textAlign="center"
               mt="4"
-              fontSize="1.2rem"
+              fontSize="1rem"
             >
               Venha conhecer nosso time em Alphaville.
             </Text>
@@ -249,20 +263,23 @@ export default function Page() {
         >
           <Text
             fontSize={mobile ? "2rem" : tablet ? "2.5rem" : "3.5rem"}
-            fontFamily="Climate Crisis"
+            fontFamily="Poppins"
             textAlign="center"
           >
             Os melhores serviços <br /> geram os maiores resultados
           </Text>
           <SimpleGrid mt="20" columns={[1, 1, 2, 2, 3, 4]} spacing="20px">
             <Flex
-              bg="#c501e2"
+              bg="#000"
               flexDir="column"
               borderRadius="50"
               justify="space-between"
               color="#FFF"
+              px="5"
             >
               <Image
+                mb={mobile ? 130 : 150}
+                mt={mobile ? 130 : 150}
                 src="/i1.png"
                 style={{
                   width: "100%",
@@ -289,11 +306,13 @@ export default function Page() {
             </Flex>
 
             <Flex
-              bg="#a9a8f6"
+              bg="#000"
               flexDir="column"
               borderRadius="50"
               justify="space-between"
               color="#FFF"
+              pt="20"
+              px="5"
             >
               <Image
                 src="/i4.png"
@@ -321,11 +340,12 @@ export default function Page() {
               </Flex>
             </Flex>
             <Flex
-              bg="#f82d97"
+              bg="#000"
               flexDir="column"
               borderRadius="50"
               justify="space-between"
               color="#FFF"
+              pt="20"
             >
               <Image
                 src="/i2.png"
@@ -353,11 +373,12 @@ export default function Page() {
               </Flex>
             </Flex>
             <Flex
-              bg="#2ef8a0"
+              bg="#000"
               flexDir="column"
               borderRadius="50"
               justify="space-between"
               color="#FFF"
+              pt="20"
             >
               <Image
                 src="/i3.png"
@@ -391,24 +412,40 @@ export default function Page() {
           flexDir="column"
           bg="#000"
           w="100%"
-          py={20}
-          px={10}
+          py={10}
+          px="8"
           color="#FFF"
           fontFamily="Poppins"
         >
-          <Flex fontSize={mobile ? "2.5rem" : tablet ? "2.5rem" : "3.5rem"}>
+          <Flex
+            fontSize={mobile ? "2.5rem" : tablet ? "2.5rem" : "3.5rem"}
+            align={mobile ? "Flex-end" : "center"}
+            overflowX="hidden"
+            flexDir={mobile ? "column" : "row"}
+          >
+            {mobile && (
+              <Image
+                src="/contact.png"
+                style={{
+                  width: 300,
+                  height: "auto",
+                }}
+              />
+            )}
             <Flex
+              minW={300}
               justify="center"
-              p="10"
+              p={mobile ? "6" : 70}
               bg="#d5fe41"
               w="100%"
+              h="-webkit-fit-content"
               borderRadius="25"
               flexDir="column"
             >
               <Text
                 fontFamily="Poppins"
                 color="#000"
-                fontSize={mobile ? "1.7rem" : "2.5rem"}
+                fontSize={mobile ? "1.2rem" : "2.5rem"}
                 fontWeight="bold"
               >
                 O que você está buscando?
@@ -421,13 +458,13 @@ export default function Page() {
                 Fale com a gente, estamos de portas abertas.
               </Text>
               <Flex align="center" mt="6">
-                <Icon as={FaPhone} color="#000" fontSize="1rem" />
+                <Icon ml="1" as={FaPhone} color="#000" fontSize="1rem" />
                 <Text
-                  ml="6"
+                  ml={mobile ? "2" : "6"}
                   fontFamily="Poppins"
                   color="#000"
                   fontWeight="bold"
-                  fontSize={mobile ? "1rem" : "1.5rem"}
+                  fontSize={mobile ? "1.6rem" : "1.5rem"}
                 >
                   +11 91579-9139
                 </Text>
@@ -435,7 +472,7 @@ export default function Page() {
               <Flex align="center" mt="6">
                 <Icon as={IoIosMail} color="#000" fontSize="1.3rem" />
                 <Text
-                  ml="6"
+                  ml={mobile ? "2" : "6"}
                   fontFamily="Poppins"
                   color="#000"
                   fontWeight="bold"
@@ -446,38 +483,293 @@ export default function Page() {
               </Flex>
               <Flex
                 mt="6"
-                w={340}
+                w={mobile ? "100%" : "-webkit-fit-content"}
                 bg="#000"
                 justify="center"
                 align="center"
                 borderRadius="full"
                 py="3"
                 px="6"
+                cursor="pointer"
               >
                 <Text
                   fontFamily="Poppins"
                   color="#FFF"
-                  fontSize="1.2rem"
+                  fontSize={mobile ? "0.9rem" : "1.2rem"}
                   fontWeight="bold"
                 >
                   Entrar em contato por aqui
                 </Text>
               </Flex>
             </Flex>
+            {!mobile && (
+              <Image
+                src="/contact.png"
+                style={{
+                  width: 300,
+                  height: "auto",
+                }}
+              />
+            )}
           </Flex>
         </Flex>
         <Flex
+          flexDir="column"
+          bg="#000"
+          w="100%"
+          py={10}
+          px="8"
+          color="#FFF"
+          fontFamily="Poppins"
+        >
+          <Text
+            fontSize={mobile ? "2rem" : tablet ? "2rem" : "3rem"}
+            fontFamily="Poppins"
+            textAlign="left"
+          >
+            Artigos recentes
+          </Text>
+          <SimpleGrid mt="10" columns={[1, 1, 2, 2, 3, 4]} spacing="20px">
+            <Flex
+              bg="#222"
+              flexDir="column"
+              borderRadius="15"
+              justify="space-between"
+              color="#FFF"
+              py="6"
+              px="8"
+            >
+              <Image
+                src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: 10,
+                }}
+              />
+              <Flex mt="8" flexDir="column">
+                <Text
+                  fontSize={mobile ? "1rem" : "1.5rem"}
+                  fontFamily="Poppins"
+                  fontWeight="bold"
+                >
+                  Como criar uma landing page altamente conversível
+                </Text>
+                <Text
+                  mt="1"
+                  fontSize={mobile ? "0.6rem" : "0.8rem"}
+                  fontFamily="Poppins"
+                >
+                  Neste artigo, explicamos como criar uma página de destino
+                  altamente conversível, com dicas para design, conteúdo,
+                  call-to-actions e teste de elementos.
+                </Text>
+                <Flex
+                  cursor="pointer"
+                  borderRadius="full"
+                  bg="#FFF"
+                  w="100%"
+                  justify="center"
+                  align="center"
+                  py="2"
+                  mt="6"
+                >
+                  <Text
+                    color="#000"
+                    fontWeight="bold"
+                    fontSize={mobile ? "0.8rem" : "1rem"}
+                    fontFamily="Poppins"
+                  >
+                    Saiba mais
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+            <Flex
+              bg="#222"
+              flexDir="column"
+              borderRadius="15"
+              justify="space-between"
+              color="#FFF"
+              py="6"
+              px="8"
+            >
+              <Image
+                src="https://images.pexels.com/photos/34601/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: 10,
+                }}
+              />
+              <Flex mt="8" flexDir="column">
+                <Text
+                  fontSize={mobile ? "1rem" : "1.5rem"}
+                  fontFamily="Poppins"
+                  fontWeight="bold"
+                >
+                  A importância do copywriting em marketing digital
+                </Text>
+                <Text
+                  mt="1"
+                  fontSize={mobile ? "0.6rem" : "0.8rem"}
+                  fontFamily="Poppins"
+                >
+                  Neste artigo, discutimos a importância do copywriting em
+                  marketing digital, incluindo dicas para criação de conteúdo
+                  persuasivo e otimização para SEO.
+                </Text>
+                <Flex
+                  cursor="pointer"
+                  borderRadius="full"
+                  bg="#FFF"
+                  w="100%"
+                  justify="center"
+                  align="center"
+                  py="2"
+                  mt="6"
+                >
+                  <Text
+                    color="#000"
+                    fontWeight="bold"
+                    fontSize={mobile ? "0.8rem" : "1rem"}
+                    fontFamily="Poppins"
+                  >
+                    Saiba mais
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+            <Flex
+              bg="#222"
+              flexDir="column"
+              borderRadius="15"
+              justify="space-between"
+              color="#FFF"
+              py="6"
+              px="8"
+            >
+              <Image
+                src="https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: 10,
+                }}
+              />
+              <Flex mt="8" flexDir="column">
+                <Text
+                  fontSize={mobile ? "1rem" : "1.5rem"}
+                  fontFamily="Poppins"
+                  fontWeight="bold"
+                >
+                  Os benefícios de investir em tráfego pago
+                </Text>
+                <Text
+                  mt="1"
+                  fontSize={mobile ? "0.6rem" : "0.8rem"}
+                  fontFamily="Poppins"
+                >
+                  Neste artigo, discutimos os benefícios de investir em tráfego
+                  pago, incluindo segmentação precisa de público-alvo, ROI
+                  mensurável e resultados rápidos
+                </Text>
+                <Flex
+                  cursor="pointer"
+                  borderRadius="full"
+                  bg="#FFF"
+                  w="100%"
+                  justify="center"
+                  align="center"
+                  py="2"
+                  mt="6"
+                >
+                  <Text
+                    color="#000"
+                    fontWeight="bold"
+                    fontSize={mobile ? "0.8rem" : "1rem"}
+                    fontFamily="Poppins"
+                  >
+                    Saiba mais
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+            <Flex
+              bg="#222"
+              flexDir="column"
+              borderRadius="15"
+              justify="space-between"
+              color="#FFF"
+              py="6"
+              px="8"
+            >
+              <Image
+                src="https://images.pexels.com/photos/2159/flight-sky-earth-space.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderRadius: 10,
+                }}
+              />
+              <Flex mt="8" flexDir="column">
+                <Text
+                  fontSize={mobile ? "1rem" : "1.5rem"}
+                  fontFamily="Poppins"
+                  fontWeight="bold"
+                >
+                  Como lançar seu produto ou serviço com sucesso
+                </Text>
+                <Text
+                  mt="1"
+                  fontSize={mobile ? "0.6rem" : "0.8rem"}
+                  fontFamily="Poppins"
+                >
+                  Neste artigo, fornecemos dicas para um lançamento
+                  bem-sucedido, desde a fase de pré-lançamento até o dia do
+                  lançamento.
+                </Text>
+                <Flex
+                  cursor="pointer"
+                  borderRadius="full"
+                  bg="#FFF"
+                  w="100%"
+                  justify="center"
+                  align="center"
+                  py="2"
+                  mt="6"
+                >
+                  <Text
+                    color="#000"
+                    fontWeight="bold"
+                    fontSize={mobile ? "0.8rem" : "1rem"}
+                    fontFamily="Poppins"
+                  >
+                    Saiba mais
+                  </Text>
+                </Flex>
+              </Flex>
+            </Flex>
+          </SimpleGrid>
+        </Flex>
+        <Flex
+          bg="#000"
+          color="#FFF"
           justify="space-between"
           w="100%"
           py={20}
           px={10}
-          color="#000"
           fontFamily="Poppins"
-          align="center"
+          align={mobile ? "flex-start" : "center"}
+          flexDir={mobile ? "column" : "row"}
         >
           <Flex flexDir="column">
-            <Text fontFamily="Poppins" fontSize={mobile ? "1rem" : "1.5rem"}>
-              Corza Digital ®
+            <Text
+              fontFamily="Poppins"
+              mb="4"
+              fontSize={mobile ? "2rem" : tablet ? "2.5rem" : "3.5rem"}
+            >
+              Corza®
             </Text>
           </Flex>
           <Flex flexDir="column"></Flex>
